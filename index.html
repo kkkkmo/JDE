@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For You 💙</title>
+</head>
+
+<body style="text-align:center; font-family:Arial; background:#1e3c72; color:white; padding-top:100px;">
+
+  <h1>🔐 Enter the Password</h1>
+  <p>Hint: your favorite playlist 💕</p>
+
+  <input type="password" id="pass">
+  <br><br>
+  <button onclick="unlock()">Unlock</button>
+
+  <div id="secret" style="display:none;">
+    <h2>🎉 Happy Birthday, My Love 🎉</h2>
+    <p>I made this website just for you.</p>
+    <p>I love you always 💙</p>
+  </div>
+
+  <script>
+    function unlock() {
+      if (document.getElementById("pass").value === "SPIKE") {
+        document.getElementById("secret").style.display = "block";
+      } else {
+        alert("Wrong password 💔");
+      }
+    }
+  </script>
+
+</body>
+</html>
