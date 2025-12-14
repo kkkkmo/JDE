@@ -1,28 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>For You 💙</title>
+  <meta charset="UTF-8">
+  <title>Locked 💙</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #1e3c72, #2a5298);
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    input {
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      margin-top: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 6px;
+      background: #ffb6c1;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
 </head>
+<body>
 
-<body style="text-align:center; font-family:Arial; background:#1e3c72; color:white; padding-top:100px;">
-
-  <h1>🔐 Enter the Password</h1>
-  <p>Hint: your favorite playlist 💕</p>
-
-  <input type="password" id="pass">
-  <br><br>
-  <button onclick="unlock()">Unlock</button>
-
-  <div id="secret" style="display:none;">
-    <h2>🎉 Happy Birthday, My Love 🎉</h2>
-    <p>I made this website just for you.</p>
-    <p>I love you always 💙</p>
+  <div>
+    <h1>🔐 Enter the Password</h1>
+    <p>favorite spotify playlist 💕</p>
+    <input type="password" id="pass" placeholder="Password">
+    <br><br>
+    <button onclick="unlock()">Unlock</button>
   </div>
 
   <script>
     function unlock() {
       if (document.getElementById("pass").value === "SPIKE") {
-        document.getElementById("secret").style.display = "block";
+        window.location.href = "secret.html";
       } else {
         alert("Wrong password 💔");
       }
